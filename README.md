@@ -1,7 +1,7 @@
 <h1 align="center"><b>BetterGPT - Forked</b></h1>
 
 <p align="center">
-    <a href="https://gpt.hilbertc.me" target="_blank"><img src="public/apple-touch-icon.png" alt="Better ChatGPT" width="100" /></a>
+    <a target="_blank"><img src="public/apple-touch-icon.png" alt="Better ChatGPT" width="100" /></a>
 </p>
 
 ## Credits
