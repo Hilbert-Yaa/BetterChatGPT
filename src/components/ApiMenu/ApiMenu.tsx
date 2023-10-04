@@ -109,8 +109,6 @@ const ApiMenu = ({
 
           <p>{t('securityMessage', { ns: 'api' })}</p>
 
-          <p>{t('apiEndpoint.description', { ns: 'api' })}</p>
-
           <p>{t('apiEndpoint.warn', { ns: 'api' })}</p>
         </div>
       </div>
