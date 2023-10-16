@@ -1,6 +1,7 @@
 import { ShareGPTSubmitBodyInterface } from '@type/api';
 import { ConfigInterface, MessageInterface } from '@type/chat';
 import { isAzureEndpoint } from '@utils/api';
+import { officialAPIEndpoint } from '@constants/auth';
 
 export const getChatCompletion = async (
   endpoint: string,
@@ -13,7 +14,7 @@ export const getChatCompletion = async (
     'Content-Type': 'application/json',
     ...customHeaders,
   };
-  if (apiKey) headers.Authorization = `Bearer ${apiKey}`;
+  if ((endpoint === officialAPIEndpoint) && apiKey) headers.Authorization = `Bearer ${apiKey}`;
 
   if (isAzureEndpoint(endpoint) && apiKey) {
     headers['api-key'] = apiKey;
@@ -92,7 +93,7 @@ export const getChatCompletionStream = async (
     if (text.includes('model_not_found')) {
       throw new Error(
         text +
-          '\nMessage from Better ChatGPT:\nPlease ensure that you have access to the GPT-4 API!'
+        '\nMessage from Better ChatGPT:\nPlease ensure that you have access to the GPT-4 API!'
       );
     } else {
       throw new Error(
