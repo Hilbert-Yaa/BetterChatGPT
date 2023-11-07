@@ -32,7 +32,7 @@ export const getChatCompletion = async (
       endpoint += path;
     }
   }
-
+  
   const response = await fetch(endpoint, {
     method: 'POST',
     headers,

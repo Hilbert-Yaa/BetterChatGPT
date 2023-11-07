@@ -22,12 +22,10 @@ export const modelOptions: ModelOptions[] = [
   'gpt-3.5-turbo-16k',
   'gpt-4',
   'gpt-4-32k',
-  // 'gpt-3.5-turbo-0301',
-  // 'gpt-4-0314',
-  // 'gpt-4-32k-0314',
+  'gpt-4-1106-preview',
 ];
 
-export const defaultModel = 'gpt-3.5-turbo';
+export const defaultModel = 'gpt-4-1106-preview';
 
 export const modelMaxToken = {
   'gpt-3.5-turbo': 4096,
@@ -41,6 +39,7 @@ export const modelMaxToken = {
   'gpt-4-32k': 32768,
   'gpt-4-32k-0314': 32768,
   'gpt-4-32k-0613': 32768,
+  'gpt-4-1106-preview': 128000
 };
 
 export const modelCost = {
@@ -88,9 +87,13 @@ export const modelCost = {
     prompt: { price: 0.06, unit: 1000 },
     completion: { price: 0.12, unit: 1000 },
   },
+  'gpt-4-1106-preview': {
+    prompt: { price: 0.01, unit: 1000 },
+    completion: { price: 0.03, unit: 1000 },
+  },
 };
 
-export const defaultUserMaxToken = 4000;
+export const defaultUserMaxToken = 4096;
 
 export const _defaultChatConfig: ConfigInterface = {
   model: defaultModel,

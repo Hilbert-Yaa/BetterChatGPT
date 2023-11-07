@@ -83,12 +83,12 @@ export const ModelSelector = ({
   return (
     <div className='mb-4'>
       <button
-        className='btn btn-neutral btn-small flex gap-1'
+        className='btn btn-neutral w-full flex gap-1'
         type='button'
         onClick={() => setDropDown((prev) => !prev)}
         aria-label='model'
       >
-        {_model}
+        {_model === 'gpt-4-1106-preview' ? 'gpt-4-turbo-128k' : _model}
         <DownChevronArrow />
       </button>
       <div
@@ -110,7 +110,7 @@ export const ModelSelector = ({
               }}
               key={m}
             >
-              {m}
+              {m === 'gpt-4-1106-preview' ? 'gpt-4-turbo-128k' : m}
             </li>
           ))}
         </ul>

@@ -49,7 +49,7 @@ const ChatTitle = React.memo(() => {
         }}
       >
         <div className='text-center p-1 rounded-md bg-gray-300/20 dark:bg-gray-900/10 hover:bg-gray-300/50 dark:hover:bg-gray-900/50'>
-          {t('model')}: {config.model}
+          {t('model')}: {config.model === 'gpt-4-1106-preview' ? 'gpt-4-turbo-128k' : config.model}
         </div>
         <div className='text-center p-1 rounded-md bg-gray-300/20 dark:bg-gray-900/10 hover:bg-gray-300/50 dark:hover:bg-gray-900/50'>
           {t('token.label')}: {config.max_tokens}
